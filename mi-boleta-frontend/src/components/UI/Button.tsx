@@ -13,7 +13,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       primary: 'bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-black hover:from-amber-300 hover:to-yellow-400 font-bold shadow-[0_0_20px_rgba(245,158,11,0.2)]',
       secondary: 'bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-amber-500/30',
       outline: 'border border-amber-500/30 text-amber-400 hover:bg-amber-500/10 hover:text-white',
-      ghost: 'text-gray-400 hover:text-white hover:bg-white/5',
+      ghost: 'text-slate-300 hover:text-white hover:bg-white/5',
       danger: 'bg-red-500/10 border border-red-500/20 text-red-400 hover:bg-red-500/20 shadow-sm',
     };
 
