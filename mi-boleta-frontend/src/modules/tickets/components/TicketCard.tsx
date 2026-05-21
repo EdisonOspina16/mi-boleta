@@ -9,9 +9,9 @@ interface TicketCardProps {
 }
 
 const statusConfig: Record<TicketStatus, { icon: any; color: string; bg: string }> = {
-  Pendiente: { icon: Clock, color: 'text-amber-600', bg: 'bg-amber-500/10' },
-  Ganado: { icon: Trophy, color: 'text-emerald-600', bg: 'bg-emerald-500/10' },
-  Perdido: { icon: XCircle, color: 'text-red-600', bg: 'bg-red-500/10' },
+  Pendiente: { icon: Clock, color: 'text-amber-300', bg: 'bg-amber-500/15 border border-amber-500/20' },
+  Ganado: { icon: Trophy, color: 'text-emerald-300', bg: 'bg-emerald-500/15 border border-emerald-500/20' },
+  Perdido: { icon: XCircle, color: 'text-red-300', bg: 'bg-red-500/15 border border-red-500/20' },
 };
 
 export function TicketCard({ ticket, onClick }: TicketCardProps) {
@@ -29,7 +29,7 @@ export function TicketCard({ ticket, onClick }: TicketCardProps) {
             <h3 className="text-lg font-bold text-white group-hover:text-amber-500 transition-colors">
               {ticket.title}
             </h3>
-            <div className="mt-1 flex items-center gap-1.5 text-sm text-gray-300">
+            <div className="mt-1 flex items-center gap-1.5 text-sm text-slate-300">
               <Tag className="h-3.5 w-3.5" />
               <span>{ticket.gameType}</span>
             </div>
@@ -41,20 +41,20 @@ export function TicketCard({ ticket, onClick }: TicketCardProps) {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="flex items-center gap-2 text-sm text-gray-300">
-            <Calendar className="h-4 w-4 text-amber-500" />
+          <div className="flex items-center gap-2 text-sm text-slate-200">
+            <Calendar className="h-4 w-4 text-amber-400" />
             <span>{new Date(ticket.gameDate).toLocaleDateString()}</span>
           </div>
           {ticket.gameNumber && (
-            <div className="flex items-center gap-2 text-sm text-gray-300">
-              <span className="font-bold text-amber-500">#{ticket.gameNumber}</span>
+            <div className="flex items-center gap-2 text-sm text-slate-200">
+              <span className="font-bold text-amber-400">#{ticket.gameNumber}</span>
             </div>
           )}
         </div>
 
         <div className="flex items-center justify-between border-t border-white/10 pt-4">
-          <div className="flex items-center gap-2 text-sm text-gray-300">
-            <MapPin className="h-4 w-4" />
+          <div className="flex items-center gap-2 text-sm text-slate-200">
+            <MapPin className="h-4 w-4 text-slate-400" />
             <span className="truncate max-w-[150px]">{ticket.place || 'Lugar no especificado'}</span>
           </div>
           {ticket.amount && (

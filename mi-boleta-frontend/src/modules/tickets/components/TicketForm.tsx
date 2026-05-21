@@ -82,10 +82,10 @@ export function TicketForm({ initialData, onSuccess, onCancel }: TicketFormProps
         />
 
         <div className="space-y-1.5">
-          <label className="text-sm font-semibold text-gray-300 ml-1">Tipo de Juego</label>
+          <label className="text-sm font-semibold text-slate-200 ml-1">Tipo de Juego</label>
           <select
             {...register('gameType')}
-            className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-2.5 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 outline-none"
+            className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-2.5 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 outline-none [&>option]:bg-[#0a0a12] [&>option]:text-white"
           >
             <option value="Lotería">Lotería</option>
             <option value="Rifa">Rifa</option>
@@ -125,10 +125,10 @@ export function TicketForm({ initialData, onSuccess, onCancel }: TicketFormProps
         />
 
         <div className="space-y-1.5">
-          <label className="text-sm font-semibold text-gray-300 ml-1">Estado</label>
+          <label className="text-sm font-semibold text-slate-200 ml-1">Estado</label>
           <select
             {...register('status')}
-            className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-2.5 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 outline-none"
+            className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-2.5 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 outline-none [&>option]:bg-[#0a0a12] [&>option]:text-white"
           >
             <option value="Pendiente">Pendiente</option>
             <option value="Ganado">Ganado</option>
@@ -138,7 +138,7 @@ export function TicketForm({ initialData, onSuccess, onCancel }: TicketFormProps
       </div>
 
       <div className="space-y-1.5">
-        <label className="text-sm font-semibold text-gray-300 ml-1">Notas Adicionales</label>
+        <label className="text-sm font-semibold text-slate-200 ml-1">Notas Adicionales</label>
         <textarea
           {...register('notes')}
           rows={3}
