@@ -14,20 +14,20 @@ export default function RegisterPage() {
           <h1 className="text-3xl font-black tracking-tight text-white">
             Crea tu cuenta
           </h1>
-          <p className="mt-2 text-gray-400 text-sm">
+          <p className="mt-2 text-slate-300 text-sm">
             Empieza a gestionar tus rifas y sorteos hoy mismo
           </p>
         </div>
 
-        <Card className="shadow-2xl shadow-black/50 border-white/5 bg-white/5 backdrop-blur-md">
+        <Card className="shadow-2xl shadow-black/50 border-white/10 bg-black/40 backdrop-blur-md">
           <RegisterForm />
         </Card>
 
-        <p className="text-center text-sm text-gray-400">
+        <p className="text-center text-sm text-slate-300">
           ¿Ya tienes una cuenta?{' '}
           <Link
             href="/auth/login"
-            className="font-bold text-amber-400 hover:text-amber-350 transition-colors"
+            className="font-bold text-amber-400 hover:text-amber-300 transition-colors"
           >
             Inicia sesión
           </Link>

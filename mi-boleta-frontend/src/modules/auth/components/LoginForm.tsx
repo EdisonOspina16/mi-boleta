@@ -9,6 +9,7 @@ import { Mail, Lock, AlertCircle } from 'lucide-react';
 import { Input } from '@/components/UI/Input';
 import { Button } from '@/components/UI/Button';
 import { authService } from '../services/auth.service';
+import { setAuthSession } from '@/lib/auth';
 
 const loginSchema = z.object({
   email: z.string().email('Email no válido'),
@@ -35,8 +36,7 @@ export function LoginForm() {
     setError(null);
     try {
       const { token, user } = await authService.login(values);
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', JSON.stringify(user));
+      setAuthSession(token, user);
       router.push('/dashboard');
       router.refresh();
     } catch (err: any) {
@@ -49,7 +49,7 @@ export function LoginForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       {error && (
-        <div className="flex items-center gap-2 rounded-lg bg-red-50 p-3 text-sm text-red-600 border border-red-100">
+        <div className="flex items-center gap-2 rounded-lg bg-red-500/10 p-3 text-sm text-red-400 border border-red-500/20">
           <AlertCircle className="h-4 w-4" />
           {error}
         </div>
@@ -64,7 +64,7 @@ export function LoginForm() {
           error={errors.email?.message}
           className="pl-10"
         />
-        <Mail className="absolute left-3 top-[38px] h-5 w-5 text-gray-400" />
+        <Mail className="absolute left-3 top-[38px] h-5 w-5 text-slate-400" />
       </div>
 
       <div className="relative">
@@ -76,7 +76,7 @@ export function LoginForm() {
           error={errors.password?.message}
           className="pl-10"
         />
-        <Lock className="absolute left-3 top-[38px] h-5 w-5 text-gray-400" />
+        <Lock className="absolute left-3 top-[38px] h-5 w-5 text-slate-400" />
       </div>
 
       <Button type="submit" className="w-full" isLoading={isLoading}>

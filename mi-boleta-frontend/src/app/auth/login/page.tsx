@@ -14,20 +14,20 @@ export default function LoginPage() {
           <h1 className="text-3xl font-black tracking-tight text-white">
             ¡Bienvenido de nuevo!
           </h1>
-          <p className="mt-2 text-gray-400 text-sm">
+          <p className="mt-2 text-slate-300 text-sm">
             Ingresa tus credenciales para administrar tus boletas
           </p>
         </div>
 
-        <Card className="shadow-2xl shadow-black/50 border-white/5 bg-white/5 backdrop-blur-md">
+        <Card className="shadow-2xl shadow-black/50 border-white/10 bg-black/40 backdrop-blur-md">
           <LoginForm />
         </Card>
 
-        <p className="text-center text-sm text-gray-400">
+        <p className="text-center text-sm text-slate-300">
           ¿No tienes una cuenta?{' '}
           <Link
             href="/auth/register"
-            className="font-bold text-amber-400 hover:text-amber-350 transition-colors"
+            className="font-bold text-amber-400 hover:text-amber-300 transition-colors"
           >
             Regístrate aquí
           </Link>
