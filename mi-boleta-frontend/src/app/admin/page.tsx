@@ -11,8 +11,8 @@ export default function AdminPage() {
           <Shield className="h-8 w-8" />
         </div>
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Panel de Administrador</h1>
-          <p className="mt-1 text-gray-600">Visualiza y gestiona todos los registros de la plataforma.</p>
+          <h1 className="text-3xl font-bold text-white">Panel de Administrador</h1>
+          <p className="mt-1 text-gray-300">Visualiza y gestiona todos los registros de la plataforma.</p>
         </div>
       </header>
 

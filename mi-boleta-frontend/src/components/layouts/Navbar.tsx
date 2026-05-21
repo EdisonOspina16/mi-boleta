@@ -35,7 +35,7 @@ export function Navbar() {
     navItems.push({ name: 'Admin', href: '/admin', icon: Shield });
   }
 
-  if (pathname.includes('/auth/')) return null;
+  if (pathname === '/' || pathname.includes('/auth/')) return null;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">

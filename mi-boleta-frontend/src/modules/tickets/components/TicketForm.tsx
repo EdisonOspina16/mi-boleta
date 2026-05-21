@@ -14,7 +14,7 @@ const ticketSchema = z.object({
   gameType: z.enum(['Lotería', 'Rifa', 'Sorteo', 'Boleta', 'Juego ocasional']),
   gameNumber: z.string().optional(),
   gameDate: z.string().min(1, 'La fecha es obligatoria'),
-  amount: z.coerce.number().optional(),
+  amount: z.number().optional(),
   place: z.string().optional(),
   status: z.enum(['Pendiente', 'Ganado', 'Perdido']),
   notes: z.string().optional(),
@@ -68,7 +68,7 @@ export function TicketForm({ initialData, onSuccess, onCancel }: TicketFormProps
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {error && (
-        <div className="rounded-lg bg-red-50 p-4 text-sm text-red-600 border border-red-100">
+        <div className="rounded-lg bg-red-500/10 p-4 text-sm text-red-400 border border-red-500/20">
           {error}
         </div>
       )}
@@ -82,10 +82,10 @@ export function TicketForm({ initialData, onSuccess, onCancel }: TicketFormProps
         />
 
         <div className="space-y-1.5">
-          <label className="text-sm font-semibold text-gray-700 ml-1">Tipo de Juego</label>
+          <label className="text-sm font-semibold text-gray-300 ml-1">Tipo de Juego</label>
           <select
             {...register('gameType')}
-            className="w-full rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-gray-900 transition-all focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 outline-none"
+            className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-2.5 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 outline-none"
           >
             <option value="Lotería">Lotería</option>
             <option value="Rifa">Rifa</option>
@@ -113,7 +113,7 @@ export function TicketForm({ initialData, onSuccess, onCancel }: TicketFormProps
           label="Valor Apostado"
           type="number"
           placeholder="Ej. 5000"
-          {...register('amount')}
+          {...register('amount', { valueAsNumber: true })}
           error={errors.amount?.message}
         />
 
@@ -125,10 +125,10 @@ export function TicketForm({ initialData, onSuccess, onCancel }: TicketFormProps
         />
 
         <div className="space-y-1.5">
-          <label className="text-sm font-semibold text-gray-700 ml-1">Estado</label>
+          <label className="text-sm font-semibold text-gray-300 ml-1">Estado</label>
           <select
             {...register('status')}
-            className="w-full rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-gray-900 transition-all focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 outline-none"
+            className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-2.5 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 outline-none"
           >
             <option value="Pendiente">Pendiente</option>
             <option value="Ganado">Ganado</option>
@@ -138,12 +138,12 @@ export function TicketForm({ initialData, onSuccess, onCancel }: TicketFormProps
       </div>
 
       <div className="space-y-1.5">
-        <label className="text-sm font-semibold text-gray-700 ml-1">Notas Adicionales</label>
+        <label className="text-sm font-semibold text-gray-300 ml-1">Notas Adicionales</label>
         <textarea
           {...register('notes')}
           rows={3}
           placeholder="Ej. Premio: Carro último modelo"
-          className="w-full rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-gray-900 transition-all focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 outline-none"
+          className="w-full rounded-xl border border-white/10 bg-black/40 px-4 py-2.5 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 outline-none"
         />
       </div>
 

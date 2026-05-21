@@ -10,6 +10,114 @@ body {
   color: var(--foreground);
 }
 
+/* 3D and Cinematic Custom Styles */
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Cosmic grid & radial mesh backgrounds */
+.bg-cosmic-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-radial-mesh {
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(234, 179, 8, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(5, 5, 10, 1) 0%, rgba(2, 2, 5, 1) 100%);
+}
+
+/* Neon glow classes */
+.text-glow-gold {
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.3), 0 0 20px rgba(251, 191, 36, 0.15);
+}
+
+.box-glow-gold {
+  box-shadow: 0 0 25px rgba(234, 179, 8, 0.2), 0 0 50px rgba(234, 179, 8, 0.1);
+}
+
+.box-glow-indigo {
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.2), 0 0 50px rgba(99, 102, 241, 0.1);
+}
+
+/* Glassmorphism premium panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-panel-gold {
+  background: rgba(234, 179, 8, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(234, 179, 8, 0.15);
+}
+
+.glass-navbar {
+  background: rgba(5, 5, 10, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom transitions and scroll animations */
+.transition-3d {
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hologram foil effect for lottery ticket */
+.hologram-foil {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.08) 40%,
+    rgba(234, 179, 8, 0.15) 50%,
+    rgba(99, 102, 241, 0.08) 60%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  background-size: 200% 200%;
+  animation: foil-shine 6s linear infinite;
+}
+
+@keyframes foil-shine {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Scanner sweep animation for features preview */
+.scanner-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(234, 179, 8, 0.8), transparent);
+  box-shadow: 0 0 8px rgba(234, 179, 8, 0.8);
+  animation: scan-vertical 3s linear infinite;
+}
+
+@keyframes scan-vertical {
+  0% { transform: translateY(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(350px); opacity: 0; }
+}
+
 /* Custom animations */
 @keyframes fade-in {
   from { opacity: 0; }

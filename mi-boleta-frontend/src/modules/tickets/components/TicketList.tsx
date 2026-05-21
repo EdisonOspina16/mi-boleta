@@ -50,7 +50,7 @@ export function TicketList({ admin = false }: { admin?: boolean }) {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row gap-4 justify-between items-center bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+      <div className="flex flex-col md:flex-row gap-4 justify-between items-center bg-black/30 p-4 rounded-2xl shadow-sm border border-white/10">
         <div className="relative w-full md:max-w-xs">
           <Input
             placeholder="Buscar por nombre o número..."
@@ -63,7 +63,7 @@ export function TicketList({ admin = false }: { admin?: boolean }) {
 
         <div className="flex gap-2 w-full md:w-auto">
           <select
-            className="rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 outline-none"
+            className="rounded-xl border border-white/10 bg-black/40 px-4 py-2 text-sm text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 outline-none"
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
           >
@@ -85,7 +85,7 @@ export function TicketList({ admin = false }: { admin?: boolean }) {
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="h-48 rounded-2xl bg-gray-100 animate-pulse" />
+            <div key={i} className="h-48 rounded-2xl bg-white/5 animate-pulse" />
           ))}
         </div>
       ) : tickets.length > 0 ? (
