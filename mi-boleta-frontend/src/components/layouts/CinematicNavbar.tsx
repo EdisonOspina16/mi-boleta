@@ -7,6 +7,7 @@ import { Ticket, LayoutDashboard, Shield, LogOut } from 'lucide-react';
 import { cn } from '@/components/UI/utils';
 import { Button } from '@/components/UI/Button';
 import { User } from '@/types';
+import { clearAuthSession, getStoredUser } from '@/lib/auth';
 
 export function CinematicNavbar() {
   const [user, setUser] = useState<User | null>(null);
@@ -14,15 +15,11 @@ export function CinematicNavbar() {
   const router = useRouter();
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
-  }, []);
+    setUser(getStoredUser());
+  }, [pathname]);
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    clearAuthSession();
     router.push('/auth/login');
     router.refresh();
   };
@@ -58,7 +55,7 @@ export function CinematicNavbar() {
                     'flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200',
                     pathname === '/dashboard'
                       ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
-                      : 'text-gray-300 hover:bg-white/5 hover:text-amber-400'
+                      : 'text-slate-200 hover:bg-white/5 hover:text-amber-400'
                   )}
                 >
                   <LayoutDashboard className="h-4 w-4" />
@@ -70,7 +67,7 @@ export function CinematicNavbar() {
                     'flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200',
                     pathname === '/tickets'
                       ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
-                      : 'text-gray-300 hover:bg-white/5 hover:text-amber-400'
+                      : 'text-slate-200 hover:bg-white/5 hover:text-amber-400'
                   )}
                 >
                   <Ticket className="h-4 w-4" />
@@ -83,7 +80,7 @@ export function CinematicNavbar() {
                       'flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200',
                       pathname === '/admin'
                         ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
-                        : 'text-gray-300 hover:bg-white/5 hover:text-amber-400'
+                        : 'text-slate-200 hover:bg-white/5 hover:text-amber-400'
                     )}
                   >
                     <Shield className="h-4 w-4" />
@@ -111,7 +108,7 @@ export function CinematicNavbar() {
                   variant="ghost"
                   size="sm"
                   onClick={handleLogout}
-                  className="text-gray-400 hover:text-red-400 hover:bg-white/5"
+                  className="text-slate-300 hover:text-red-400 hover:bg-white/5"
                 >
                   <LogOut className="h-5 w-5" />
                 </Button>
@@ -119,7 +116,7 @@ export function CinematicNavbar() {
             ) : (
               <div className="flex items-center gap-2.5">
                 <Link href="/auth/login">
-                  <button className="px-4 py-2 text-sm font-semibold text-gray-300 hover:text-white transition-colors">
+                  <button className="px-4 py-2 text-sm font-semibold text-slate-200 hover:text-white transition-colors">
                     Iniciar Sesión
                   </button>
                 </Link>

@@ -11,8 +11,8 @@ export function Footer() {
   }
 
   return (
-    <footer className="border-t border-gray-100 bg-white py-8">
-      <div className="mx-auto max-w-7xl px-4 text-center text-sm text-gray-500">
+    <footer className="border-t border-white/10 bg-[#030307] py-8">
+      <div className="mx-auto max-w-7xl px-4 text-center text-sm text-slate-300">
         &copy; {new Date().getFullYear()} Mi Boleta. Todos los derechos reservados.
       </div>
     </footer>
