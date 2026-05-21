@@ -1,13 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9fafb;
-  --foreground: #111827;
+  --background: #030307;
+  --foreground: #f8fafc;
+  --text-muted: #cbd5e1;
+  --text-subtle: #94a3b8;
+  --text-faint: #64748b;
+  --surface: rgba(0, 0, 0, 0.35);
+  --border: rgba(255, 255, 255, 0.1);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Legible text on dark cinematic backgrounds */
+.text-on-dark {
+  color: var(--foreground);
+}
+
+.text-on-dark-muted {
+  color: var(--text-muted);
+}
+
+.text-on-dark-subtle {
+  color: var(--text-subtle);
 }
 
 /* 3D and Cinematic Custom Styles */
