@@ -1,9 +1,20 @@
 'use client';
 
 import { TicketList } from '@/modules/tickets/components/TicketList';
+import { useRequireAdmin } from '@/hooks/useAuth';
 import { Shield } from 'lucide-react';
 
 export default function AdminPage() {
+  const { ready, isAdmin } = useRequireAdmin();
+
+  if (!ready || !isAdmin) {
+    return (
+      <div className="mx-auto max-w-7xl px-4 py-16 text-center text-slate-300">
+        Verificando permisos…
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-8">
       <header className="flex items-center gap-4">
@@ -12,7 +23,9 @@ export default function AdminPage() {
         </div>
         <div>
           <h1 className="text-3xl font-bold text-white">Panel de Administrador</h1>
-          <p className="mt-1 text-gray-300">Visualiza y gestiona todos los registros de la plataforma.</p>
+          <p className="mt-1 text-slate-300">
+            Visualiza y gestiona todos los registros de la plataforma.
+          </p>
         </div>
       </header>
 

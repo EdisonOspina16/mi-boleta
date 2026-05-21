@@ -7,20 +7,28 @@ import { Card } from '@/components/UI/Card';
 import { TicketCard } from '@/modules/tickets/components/TicketCard';
 import { Trophy, Clock, History, Calendar, TrendingUp } from 'lucide-react';
 import { cn } from '@/components/UI/utils';
+import { useRequireAuth } from '@/hooks/useAuth';
+import { getStoredUser } from '@/lib/auth';
 
 export default function DashboardPage() {
   const [tickets, setTickets] = useState<Ticket[]>([]);
+  const [totalTickets, setTotalTickets] = useState(0);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<User | null>(null);
+  const { ready, isAuthenticated } = useRequireAuth();
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('user');
-    if (storedUser) setUser(JSON.parse(storedUser));
+    setUser(getStoredUser());
+  }, []);
+
+  useEffect(() => {
+    if (!ready || !isAuthenticated) return;
 
     const fetchData = async () => {
       try {
-        const response = await ticketService.getTickets({ pageSize: 50 });
+        const response = await ticketService.getTickets({ pageSize: 100 });
         setTickets(response.data);
+        setTotalTickets(response.meta.total);
       } catch (error) {
         console.error(error);
       } finally {
@@ -28,10 +36,18 @@ export default function DashboardPage() {
       }
     };
     fetchData();
-  }, []);
+  }, [ready, isAuthenticated]);
+
+  if (!ready || !isAuthenticated) {
+    return (
+      <div className="mx-auto max-w-7xl px-4 py-16 text-center text-slate-300">
+        Cargando…
+      </div>
+    );
+  }
 
   const stats = {
-    total: tickets.length,
+    total: totalTickets,
     pending: tickets.filter(t => t.status === 'Pendiente').length,
     won: tickets.filter(t => t.status === 'Ganado').length,
     totalAmount: tickets.reduce((acc, t) => acc + (Number(t.amount) || 0), 0),
@@ -46,7 +62,7 @@ export default function DashboardPage() {
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8 space-y-8">
       <header>
         <h1 className="text-3xl font-bold text-white">Hola, {user?.name || 'Usuario'} 👋</h1>
-        <p className="mt-2 text-gray-300">Aquí tienes un resumen de tus juegos y sorteos.</p>
+        <p className="mt-2 text-slate-300">Aquí tienes un resumen de tus juegos y sorteos.</p>
       </header>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -59,14 +75,14 @@ export default function DashboardPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-              <Calendar className="h-5 w-5 text-indigo-600" />
+            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+              <Calendar className="h-5 w-5 text-amber-500" />
               Próximos Sorteos
             </h2>
           </div>
           {loading ? (
             <div className="space-y-4">
-              {[1, 2].map(i => <div key={i} className="h-32 bg-gray-100 rounded-2xl animate-pulse" />)}
+              {[1, 2].map(i => <div key={i} className="h-32 bg-white/5 rounded-2xl animate-pulse" />)}
             </div>
           ) : upcomingTickets.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -75,7 +91,7 @@ export default function DashboardPage() {
               ))}
             </div>
           ) : (
-            <Card className="text-center py-12 text-gray-300 border-2 border-dashed bg-black/20 backdrop-blur-sm border-white/10">
+            <Card className="text-center py-12 text-slate-200 border-2 border-dashed bg-black/20 backdrop-blur-sm border-white/10">
               No tienes sorteos próximos. ¡Anímate a jugar!
             </Card>
           )}
@@ -89,7 +105,7 @@ export default function DashboardPage() {
                 <div key={ticket.id} className="p-4 flex items-center justify-between hover:bg-white/5 transition-colors cursor-pointer">
                   <div>
                     <p className="font-semibold text-white">{ticket.title}</p>
-                    <p className="text-xs text-gray-400">{new Date(ticket.gameDate).toLocaleDateString()}</p>
+                    <p className="text-xs text-slate-400">{new Date(ticket.gameDate).toLocaleDateString()}</p>
                   </div>
                   <span className={cn(
                     "text-xs font-bold px-2 py-1 rounded-full",
@@ -101,7 +117,7 @@ export default function DashboardPage() {
                 </div>
               ))}
               {tickets.length === 0 && (
-                <div className="p-8 text-center text-gray-400 text-sm">Sin actividad</div>
+                <div className="p-8 text-center text-slate-300 text-sm">Sin actividad</div>
               )}
             </div>
           </Card>
@@ -118,7 +134,7 @@ function StatCard({ title, value, icon: Icon, color, bg }: any) {
         <Icon className={cn("h-6 w-6", color)} />
       </div>
       <div>
-        <p className="text-sm font-medium text-gray-300">{title}</p>
+        <p className="text-sm font-medium text-slate-300">{title}</p>
         <p className="text-2xl font-bold text-white">{value}</p>
       </div>
     </Card>

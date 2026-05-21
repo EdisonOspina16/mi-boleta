@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { clearAuthSession } from '@/lib/auth';
 
 const API_URL = process.env.NEXT_PUBLIC_API_BASE_URL || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api/v1';
 
@@ -22,8 +23,7 @@ api.interceptors.response.use(
   (error) => {
     if (error.response?.status === 401) {
       if (typeof window !== 'undefined') {
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
+        clearAuthSession();
         // Avoid redirect loop if already on login
         if (!window.location.pathname.includes('/auth/login')) {
           window.location.href = '/auth/login';

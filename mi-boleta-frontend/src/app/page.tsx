@@ -192,21 +192,21 @@ function DigitalCountdown() {
         <div className="bg-[#0b0b14] border border-amber-500/20 text-amber-400 font-bold text-2xl sm:text-4xl px-3 py-1.5 rounded-lg shadow-[0_0_15px_rgba(245,158,11,0.1)]">
           {formatNum(timeLeft.hrs)}
         </div>
-        <span className="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Horas</span>
+        <span className="text-[10px] text-slate-400 uppercase tracking-widest mt-1">Horas</span>
       </div>
       <div className="text-amber-500 font-bold text-3xl animate-pulse -mt-4">:</div>
       <div className="flex flex-col items-center">
         <div className="bg-[#0b0b14] border border-amber-500/20 text-amber-400 font-bold text-2xl sm:text-4xl px-3 py-1.5 rounded-lg shadow-[0_0_15px_rgba(245,158,11,0.1)]">
           {formatNum(timeLeft.mins)}
         </div>
-        <span className="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Minutos</span>
+        <span className="text-[10px] text-slate-400 uppercase tracking-widest mt-1">Minutos</span>
       </div>
       <div className="text-amber-500 font-bold text-3xl animate-pulse -mt-4">:</div>
       <div className="flex flex-col items-center">
         <div className="bg-[#0b0b14] border border-amber-500/20 text-amber-400 font-bold text-2xl sm:text-4xl px-3 py-1.5 rounded-lg shadow-[0_0_15px_rgba(245,158,11,0.1)]">
           {formatNum(timeLeft.secs)}
         </div>
-        <span className="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Segundos</span>
+        <span className="text-[10px] text-slate-400 uppercase tracking-widest mt-1">Segundos</span>
       </div>
     </div>
   );
@@ -404,7 +404,7 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="mt-6 text-base sm:text-xl text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="mt-6 text-base sm:text-xl text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               El 7% de los premios de loterías y rifas quedan sin reclamar cada año en el mundo por simple olvido. Sigue, gestiona y recibe alertas automáticas para que nunca más dejes tu suerte en la sombra.
             </p>
 
@@ -416,7 +416,7 @@ export default function Home() {
                 </button>
               </Link>
               <a href="#how-it-works" className="w-full sm:w-auto">
-                <button className="w-full px-8 py-4 glass-panel border-white/10 hover:border-amber-500/40 text-gray-300 hover:text-white rounded-2xl font-bold transition-all duration-300">
+                <button className="w-full px-8 py-4 glass-panel border-white/10 hover:border-amber-500/40 text-slate-200 hover:text-white rounded-2xl font-bold transition-all duration-300">
                   Ver cómo funciona
                 </button>
               </a>
@@ -426,12 +426,12 @@ export default function Home() {
             <div className="mt-12 flex items-center justify-center lg:justify-start gap-6 border-t border-white/5 pt-8 max-w-md mx-auto lg:mx-0">
               <div>
                 <p className="text-2xl font-black text-white">$14.2M</p>
-                <p className="text-xs text-gray-500 tracking-wider">Premios olvidados en 2025</p>
+                <p className="text-xs text-slate-400 tracking-wider">Premios olvidados en 2025</p>
               </div>
               <div className="w-px h-10 bg-white/10" />
               <div>
                 <p className="text-2xl font-black text-amber-500 font-mono">100%</p>
-                <p className="text-xs text-gray-500 tracking-wider">Verificación Automática</p>
+                <p className="text-xs text-slate-400 tracking-wider">Verificación Automática</p>
               </div>
             </div>
           </motion.div>
@@ -468,10 +468,10 @@ export default function Home() {
                   WHAT IF <br />
                   <span className="text-amber-400">I ACTUALLY WON?</span>
                 </h3>
-                <p className="text-[10px] text-gray-500 mt-2 font-mono tracking-widest">REG: #MB-2026-UDEM</p>
+                <p className="text-[10px] text-slate-400 mt-2 font-mono tracking-widest">REG: #MB-2026-UDEM</p>
                 
                 <div className="mt-8 border-t border-b border-white/10 py-4">
-                  <p className="text-[10px] text-gray-500 font-mono tracking-widest mb-1.5 uppercase">Tus números seleccionados</p>
+                  <p className="text-[10px] text-slate-400 font-mono tracking-widest mb-1.5 uppercase">Tus números seleccionados</p>
                   <div className="flex gap-2">
                     {ticketNumbers.map((num, i) => (
                       <motion.div 
@@ -529,7 +529,7 @@ export default function Home() {
                     <div className="w-0.5 bg-white" /><div className="w-2 bg-white" /><div className="w-1.5 bg-white" />
                     <div className="w-1 bg-white" /><div className="w-2.5 bg-white" /><div className="w-0.5 bg-white" />
                   </div>
-                  <p className="text-center text-[8px] font-mono text-gray-500 tracking-[0.3em] mt-1">2026-MI-BOLETA-WIN-APP</p>
+                  <p className="text-center text-[8px] font-mono text-slate-400 tracking-[0.3em] mt-1">2026-MI-BOLETA-WIN-APP</p>
                 </div>
               </div>
             </div>
@@ -552,7 +552,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-5xl font-black tracking-tight">
               ¿Cómo aseguramos <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300 text-glow-gold">tu suerte?</span>
             </h2>
-            <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+            <p className="mt-4 text-slate-300 max-w-xl mx-auto">
               Diseñado con ingeniería de primer nivel para que nunca más vuelvas a perder dinero por un ticket olvidado.
             </p>
           </div>
@@ -601,7 +601,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-5xl font-black tracking-tight">
               Una plataforma interactiva de <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-300 to-indigo-400">alta fidelidad</span>
             </h2>
-            <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+            <p className="mt-4 text-slate-300 max-w-xl mx-auto">
               Prueba nuestro simulador interactivo y descubre el poder del software diseñado para tus premios.
             </p>
           </div>
@@ -615,7 +615,7 @@ export default function Home() {
                 <span className="h-3.5 w-3.5 rounded-full bg-red-500/80" />
                 <span className="h-3.5 w-3.5 rounded-full bg-yellow-500/80" />
                 <span className="h-3.5 w-3.5 rounded-full bg-green-500/80" />
-                <span className="text-xs font-mono text-gray-500 ml-4 font-bold">SYSTEM-DASHBOARD_V1.03.exe</span>
+                <span className="text-xs font-mono text-slate-400 ml-4 font-bold">SYSTEM-DASHBOARD_V1.03.exe</span>
               </div>
               
               <div className="flex gap-2">
@@ -623,7 +623,7 @@ export default function Home() {
                   onClick={() => { setActiveTab('main'); }}
                   className={cn(
                     "px-4 py-2 text-xs font-bold rounded-lg transition-all",
-                    activeTab === 'main' ? "bg-amber-500 text-black shadow-lg shadow-amber-500/25" : "text-gray-400 hover:text-white bg-white/5 hover:bg-white/10"
+                    activeTab === 'main' ? "bg-amber-500 text-black shadow-lg shadow-amber-500/25" : "text-slate-300 hover:text-white bg-white/5 hover:bg-white/10"
                   )}
                 >
                   Panel Principal
@@ -632,7 +632,7 @@ export default function Home() {
                   onClick={() => { setActiveTab('search'); }}
                   className={cn(
                     "px-4 py-2 text-xs font-bold rounded-lg transition-all",
-                    activeTab === 'search' ? "bg-amber-500 text-black shadow-lg shadow-amber-500/25" : "text-gray-400 hover:text-white bg-white/5 hover:bg-white/10"
+                    activeTab === 'search' ? "bg-amber-500 text-black shadow-lg shadow-amber-500/25" : "text-slate-300 hover:text-white bg-white/5 hover:bg-white/10"
                   )}
                 >
                   Buscador Inteligente
@@ -641,7 +641,7 @@ export default function Home() {
                   onClick={() => { setActiveTab('alerts'); }}
                   className={cn(
                     "px-4 py-2 text-xs font-bold rounded-lg transition-all",
-                    activeTab === 'alerts' ? "bg-amber-500 text-black shadow-lg shadow-amber-500/25" : "text-gray-400 hover:text-white bg-white/5 hover:bg-white/10"
+                    activeTab === 'alerts' ? "bg-amber-500 text-black shadow-lg shadow-amber-500/25" : "text-slate-300 hover:text-white bg-white/5 hover:bg-white/10"
                   )}
                 >
                   Recordatorios SMS
@@ -650,7 +650,7 @@ export default function Home() {
                   onClick={() => { setActiveTab('admin'); }}
                   className={cn(
                     "px-4 py-2 text-xs font-bold rounded-lg transition-all",
-                    activeTab === 'admin' ? "bg-amber-500 text-black shadow-lg shadow-amber-500/25" : "text-gray-400 hover:text-white bg-white/5 hover:bg-white/10"
+                    activeTab === 'admin' ? "bg-amber-500 text-black shadow-lg shadow-amber-500/25" : "text-slate-300 hover:text-white bg-white/5 hover:bg-white/10"
                   )}
                 >
                   Admin Panel
@@ -671,19 +671,19 @@ export default function Home() {
                   <div className="md:col-span-2 space-y-6">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-[#0b0818]/60 border border-white/5 p-4 rounded-xl">
-                        <span className="text-[10px] uppercase text-gray-500 tracking-wider font-bold">Total Boletas Activas</span>
+                        <span className="text-[10px] uppercase text-slate-400 tracking-wider font-bold">Total Boletas Activas</span>
                         <p className="text-3xl font-black mt-1 text-white flex items-center gap-2">
                           18 <span className="text-xs bg-emerald-500/20 text-emerald-400 font-bold px-2 py-0.5 rounded-full">+4 esta semana</span>
                         </p>
                       </div>
                       <div className="bg-[#0b0818]/60 border border-white/5 p-4 rounded-xl">
-                        <span className="text-[10px] uppercase text-gray-500 tracking-wider font-bold">Tasa de Comprobación</span>
+                        <span className="text-[10px] uppercase text-slate-400 tracking-wider font-bold">Tasa de Comprobación</span>
                         <p className="text-3xl font-black mt-1 text-amber-500 font-mono">100%</p>
                       </div>
                     </div>
 
                     <div className="bg-[#0b0818]/60 border border-white/5 p-5 rounded-xl">
-                      <h4 className="text-sm font-bold text-gray-300 mb-4 flex items-center gap-2">
+                      <h4 className="text-sm font-bold text-slate-200 mb-4 flex items-center gap-2">
                         <TrendingUp className="h-4 w-4 text-amber-500" />
                         Histórico de Acumulados & Comprobación (Auto Check)
                       </h4>
@@ -708,7 +708,7 @@ export default function Home() {
                           />
                         </svg>
                       </div>
-                      <div className="flex justify-between text-[10px] text-gray-500 font-mono mt-2 uppercase">
+                      <div className="flex justify-between text-[10px] text-slate-400 font-mono mt-2 uppercase">
                         <span>Mar</span><span>Abr</span><span>May (Actual)</span>
                       </div>
                     </div>
@@ -716,7 +716,7 @@ export default function Home() {
 
                   <div className="bg-[#0b0818]/60 border border-white/5 p-4 rounded-xl space-y-4 flex flex-col justify-between">
                     <div>
-                      <h4 className="text-xs font-bold uppercase text-gray-400 tracking-wider flex items-center gap-2 mb-3">
+                      <h4 className="text-xs font-bold uppercase text-slate-300 tracking-wider flex items-center gap-2 mb-3">
                         <Ticket className="h-4 w-4 text-amber-500" />
                         Boletas Próximas
                       </h4>
@@ -724,14 +724,14 @@ export default function Home() {
                         <div className="bg-black/30 p-2.5 rounded-lg border border-white/5 flex justify-between items-center">
                           <div>
                             <p className="text-xs font-bold text-white">Powerball USD</p>
-                            <p className="text-[9px] text-gray-500 font-mono">14-27-33-45-59 [7]</p>
+                            <p className="text-[9px] text-slate-400 font-mono">14-27-33-45-59 [7]</p>
                           </div>
                           <span className="text-[10px] font-mono text-amber-400 font-bold bg-amber-500/10 px-2 py-0.5 rounded">En 2h</span>
                         </div>
                         <div className="bg-black/30 p-2.5 rounded-lg border border-white/5 flex justify-between items-center">
                           <div>
                             <p className="text-xs font-bold text-white">Sorteo Especial Lotería</p>
-                            <p className="text-[9px] text-gray-500 font-mono">08-19-22-31-50 [4]</p>
+                            <p className="text-[9px] text-slate-400 font-mono">08-19-22-31-50 [4]</p>
                           </div>
                           <span className="text-[10px] font-mono text-indigo-400 font-bold bg-indigo-500/10 px-2 py-0.5 rounded">Mañana</span>
                         </div>
@@ -757,7 +757,7 @@ export default function Home() {
                 >
                   <div className="flex gap-3">
                     <div className="relative flex-1">
-                      <Search className="absolute left-3.5 top-3.5 h-4.5 w-4.5 text-gray-500" />
+                      <Search className="absolute left-3.5 top-3.5 h-4.5 w-4.5 text-slate-400" />
                       <input 
                         type="text" 
                         value={searchQuery}
@@ -775,7 +775,7 @@ export default function Home() {
                   </div>
 
                   <div className="bg-[#0b0818]/60 border border-white/5 rounded-xl overflow-hidden">
-                    <div className="grid grid-cols-4 gap-4 bg-black/40 px-4 py-2 text-[10px] font-bold text-gray-500 uppercase tracking-widest border-b border-white/5">
+                    <div className="grid grid-cols-4 gap-4 bg-black/40 px-4 py-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest border-b border-white/5">
                       <span>Sorteo / Rifa</span>
                       <span>Números de Boleta</span>
                       <span>Fecha</span>
@@ -788,14 +788,14 @@ export default function Home() {
                           <div key={idx} className="grid grid-cols-4 gap-4 px-4 py-3.5 text-xs items-center hover:bg-white/5 transition-colors">
                             <span className="font-bold text-white">{t.name}</span>
                             <span className="font-mono text-amber-400 font-bold">{t.numbers}</span>
-                            <span className="text-gray-400">{t.date}</span>
+                            <span className="text-slate-300">{t.date}</span>
                             <span className="text-right">
                               <span className={cn(
                                 "text-[10px] font-bold px-2 py-0.5 rounded",
                                 t.status === 'Confirmado' && "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
                                 t.status === 'Pendiente' && "bg-amber-500/10 text-amber-400 border border-amber-500/20",
                                 t.status === 'Activo' && "bg-indigo-500/10 text-indigo-400 border border-indigo-500/20",
-                                t.status === 'Registrado' && "bg-white/5 text-gray-300 border border-white/10"
+                                t.status === 'Registrado' && "bg-white/5 text-slate-200 border border-white/10"
                               )}>
                                 {t.status}
                               </span>
@@ -803,7 +803,7 @@ export default function Home() {
                           </div>
                         ))
                       ) : (
-                        <div className="p-8 text-center text-gray-500 text-xs flex flex-col items-center justify-center gap-2">
+                        <div className="p-8 text-center text-slate-400 text-xs flex flex-col items-center justify-center gap-2">
                           <AlertCircle className="h-6 w-6 text-amber-500/50" />
                           No se encontraron boletas con la búsqueda "{searchQuery}"
                         </div>
@@ -826,7 +826,7 @@ export default function Home() {
                         <Bell className="h-4.5 w-4.5 text-amber-500" />
                         Configurar Alertas Móviles
                       </h4>
-                      <p className="text-xs text-gray-400 leading-relaxed">
+                      <p className="text-xs text-slate-300 leading-relaxed">
                         Te notificamos instantáneamente al momento de validarse un sorteo. Activa notificaciones directas por SMS, correo electrónico o mensajería de voz sintética.
                       </p>
 
@@ -834,7 +834,7 @@ export default function Home() {
                         <div className="flex items-center justify-between p-3 bg-black/30 border border-white/5 rounded-lg">
                           <div>
                             <p className="text-xs font-bold text-white">Alertas por SMS Directo</p>
-                            <p className="text-[10px] text-gray-500">Notificación al instante de ganar</p>
+                            <p className="text-[10px] text-slate-400">Notificación al instante de ganar</p>
                           </div>
                           <button 
                             onClick={() => {
@@ -853,7 +853,7 @@ export default function Home() {
                         <div className="flex items-center justify-between p-3 bg-black/30 border border-white/5 rounded-lg">
                           <div>
                             <p className="text-xs font-bold text-white">Inteligencia Artificial Chequeo-Automático</p>
-                            <p className="text-[10px] text-gray-500">Auto consulta con OCR en la nube</p>
+                            <p className="text-[10px] text-slate-400">Auto consulta con OCR en la nube</p>
                           </div>
                           <button 
                             onClick={() => {
@@ -873,15 +873,15 @@ export default function Home() {
                   </div>
 
                   <div className="bg-[#0b0818]/60 border border-white/5 p-5 rounded-xl space-y-4">
-                    <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest">Vista Previa de Alertas</h4>
+                    <h4 className="text-xs font-bold text-slate-300 uppercase tracking-widest">Vista Previa de Alertas</h4>
                     
                     <div className="space-y-2 font-mono">
                       <div className="bg-amber-500/10 border border-amber-500/30 p-3 rounded-lg flex items-start gap-3 shadow-[0_0_15px_rgba(245,158,11,0.05)]">
                         <Sparkles className="h-5 w-5 text-amber-500 flex-shrink-0 animate-bounce" />
                         <div>
                           <p className="text-xs font-black text-amber-400">ALERT: GANADOR OFICIAL</p>
-                          <p className="text-[10px] text-gray-300 mt-1">¡Felicidades Edison! Tu ticket #MB-POWER de Powerball coincide con 5 números. Premio aproximado: $10,000 USD.</p>
-                          <span className="text-[8px] text-gray-500 block mt-1.5">Hace 2 minutos</span>
+                          <p className="text-[10px] text-slate-200 mt-1">¡Felicidades Edison! Tu ticket #MB-POWER de Powerball coincide con 5 números. Premio aproximado: $10,000 USD.</p>
+                          <span className="text-[8px] text-slate-400 block mt-1.5">Hace 2 minutos</span>
                         </div>
                       </div>
 
@@ -889,8 +889,8 @@ export default function Home() {
                         <Clock className="h-5 w-5 text-indigo-400 flex-shrink-0" />
                         <div>
                           <p className="text-xs font-black text-indigo-400">RECORDATORIO</p>
-                          <p className="text-[10px] text-gray-300 mt-1">El acumulado de Mega Millions ha alcanzado los $450 Millones de USD. Tu recordatorio expira en 4 horas.</p>
-                          <span className="text-[8px] text-gray-500 block mt-1.5">Hace 1 hora</span>
+                          <p className="text-[10px] text-slate-200 mt-1">El acumulado de Mega Millions ha alcanzado los $450 Millones de USD. Tu recordatorio expira en 4 horas.</p>
+                          <span className="text-[8px] text-slate-400 block mt-1.5">Hace 1 hora</span>
                         </div>
                       </div>
                     </div>
@@ -908,8 +908,8 @@ export default function Home() {
                   <div className="bg-[#0b0818]/60 border border-white/5 p-4 rounded-xl flex flex-col justify-between text-center">
                     <div>
                       <Shield className="h-8 w-8 text-amber-500 mx-auto mb-2" />
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-gray-300">Monitoreo de APIs</h4>
-                      <p className="text-[10px] text-gray-500 mt-1">Conexión con servidores de Lotería Nacional</p>
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Monitoreo de APIs</h4>
+                      <p className="text-[10px] text-slate-400 mt-1">Conexión con servidores de Lotería Nacional</p>
                     </div>
                     <div className="mt-4 bg-emerald-500/20 text-emerald-400 font-mono text-xs font-bold border border-emerald-500/30 px-3 py-1.5 rounded-lg">
                       ONLINE (Ping: 12ms)
@@ -919,8 +919,8 @@ export default function Home() {
                   <div className="bg-[#0b0818]/60 border border-white/5 p-4 rounded-xl flex flex-col justify-between text-center">
                     <div>
                       <Layers className="h-8 w-8 text-amber-500 mx-auto mb-2" />
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-gray-300">Auditorías Automatizadas</h4>
-                      <p className="text-[10px] text-gray-500 mt-1">Búsqueda profunda de tickets ganadores</p>
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">Auditorías Automatizadas</h4>
+                      <p className="text-[10px] text-slate-400 mt-1">Búsqueda profunda de tickets ganadores</p>
                     </div>
                     <button 
                       onClick={() => showToast('Auditoría profunda iniciada para 18 boletas')}
@@ -933,8 +933,8 @@ export default function Home() {
                   <div className="bg-[#0b0818]/60 border border-white/5 p-4 rounded-xl flex flex-col justify-between text-center">
                     <div>
                       <CheckCircle2 className="h-8 w-8 text-amber-500 mx-auto mb-2" />
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-gray-300">BBDD de Ganadores</h4>
-                      <p className="text-[10px] text-gray-500 mt-1">Historial general de premios localizados</p>
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">BBDD de Ganadores</h4>
+                      <p className="text-[10px] text-slate-400 mt-1">Historial general de premios localizados</p>
                     </div>
                     <div className="mt-4 bg-black/40 border border-white/5 p-2 rounded-lg text-amber-400 font-mono text-[10px] font-bold">
                       7 PREMIOS DETECTADOS
@@ -944,7 +944,7 @@ export default function Home() {
               )}
 
               {/* Interactive Dashboard Footer */}
-              <div className="mt-8 pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-[10px] text-gray-500 font-mono">
+              <div className="mt-8 pt-4 border-t border-white/5 flex flex-wrap items-center justify-between text-[10px] text-slate-400 font-mono">
                 <span className="flex items-center gap-1.5 uppercase font-bold text-amber-500/70">
                   <span className="h-2 w-2 rounded-full bg-amber-500" />
                   SERVIDOR DE PRUEBA ACTIVO
@@ -981,7 +981,7 @@ export default function Home() {
                 </span>
               </h2>
               
-              <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
                 No permitas que las horas pasen sin registrar tu ticket. El reloj corre y el sistema valida de inmediato al emitirse los resultados oficiales.
               </p>
 
@@ -1060,7 +1060,7 @@ export default function Home() {
             y <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-600 text-glow-gold">nunca abriste la puerta?</span>
           </h2>
 
-          <p className="text-gray-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
             Regístrate gratis hoy mismo y pon tus tickets a salvo. Toma solo 2 minutos sincronizar tus primeros sorteos.
           </p>
 
@@ -1078,7 +1078,7 @@ export default function Home() {
       {/* ----------------------------------------------------
           SECTION 6: CINEMATIC DARK FOOTER
       ---------------------------------------------------- */}
-      <footer className="relative py-16 sm:py-24 px-4 z-20 border-t border-white/10 bg-[#020205] text-gray-400">
+      <footer className="relative py-16 sm:py-24 px-4 z-20 border-t border-white/10 bg-[#020205] text-slate-300">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/5 pb-16">
           
           {/* Brand Column */}
@@ -1097,7 +1097,7 @@ export default function Home() {
               </div>
             </Link>
             
-            <p className="text-xs text-gray-500 leading-relaxed">
+            <p className="text-xs text-slate-400 leading-relaxed">
               El software inteligente premium que escanea y valida tus boletas de sorteo, sweepstakes y loterías a nivel mundial para que nunca más olvides reclamar lo que es tuyo.
             </p>
 
@@ -1110,7 +1110,7 @@ export default function Home() {
           {/* Links Column 1 */}
           <div className="space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">Solución</h4>
-            <ul className="space-y-2.5 text-xs text-gray-500">
+            <ul className="space-y-2.5 text-xs text-slate-400">
               <li><Link href="/auth/register" className="hover:text-amber-500 transition-colors">Registro Seguro</Link></li>
               <li><a href="#how-it-works" className="hover:text-amber-500 transition-colors">Escaneo en la Nube</a></li>
               <li><Link href="/dashboard" className="hover:text-amber-500 transition-colors">Panel Inteligente</Link></li>
@@ -1121,7 +1121,7 @@ export default function Home() {
           {/* Links Column 2 */}
           <div className="space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">Legal & Seguridad</h4>
-            <ul className="space-y-2.5 text-xs text-gray-500">
+            <ul className="space-y-2.5 text-xs text-slate-400">
               <li><a href="#" className="hover:text-amber-500 transition-colors">Políticas de Privacidad</a></li>
               <li><a href="#" className="hover:text-amber-500 transition-colors">Términos de Servicio</a></li>
               <li><a href="#" className="hover:text-amber-500 transition-colors">Seguridad de Encriptación</a></li>
@@ -1132,7 +1132,7 @@ export default function Home() {
           {/* Links Column 3 */}
           <div className="space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">Soporte y Contacto</h4>
-            <ul className="space-y-2.5 text-xs text-gray-500">
+            <ul className="space-y-2.5 text-xs text-slate-400">
               <li><a href="#" className="hover:text-amber-500 transition-colors">Centro de Ayuda</a></li>
               <li><a href="#" className="hover:text-amber-500 transition-colors">Soporte Técnico 24/7</a></li>
               <li><a href="#" className="hover:text-amber-500 transition-colors">Preguntas Frecuentes</a></li>
@@ -1143,7 +1143,7 @@ export default function Home() {
         </div>
 
         {/* Footer legal notes */}
-        <div className="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-600 gap-4">
+        <div className="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
           <p>&copy; {new Date().getFullYear()} What If I Actually Won? / Mi Boleta. Todos los derechos reservados.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-amber-500/70 transition-colors">Instagram</a>
@@ -1180,12 +1180,12 @@ function StepCard({ num, icon: Icon, title, description }: StepCardProps) {
           <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 text-amber-500 group-hover:bg-amber-500/10 group-hover:scale-110 transition-all duration-300">
             <Icon className="h-5 w-5" />
           </div>
-          <span className="font-mono text-2xl font-black text-white/10 group-hover:text-amber-500/20 transition-colors">
+          <span className="font-mono text-2xl font-black text-white/25 group-hover:text-amber-500/40 transition-colors">
             {num}
           </span>
         </div>
         <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors mb-3">{title}</h3>
-        <p className="text-gray-400 text-xs leading-relaxed">{description}</p>
+        <p className="text-slate-300 text-xs leading-relaxed">{description}</p>
       </div>
     </div>
   );
@@ -1213,13 +1213,13 @@ function LotteryCard({ name, jackpot, closeText, color, logoText, onActivate }: 
         </div>
         <div>
           <h4 className="text-sm font-bold text-white">{name}</h4>
-          <p className="text-xs text-gray-500 font-mono mt-0.5">{closeText}</p>
+          <p className="text-xs text-slate-400 font-mono mt-0.5">{closeText}</p>
         </div>
       </div>
 
       <div className="flex sm:flex-col items-start sm:items-end justify-between w-full sm:w-auto gap-2">
         <div>
-          <span className="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Acumulado</span>
+          <span className="text-[9px] text-slate-400 uppercase tracking-widest font-bold">Acumulado</span>
           <p className="text-lg font-black text-amber-400 font-mono -mt-1">{jackpot}</p>
         </div>
         <button 
